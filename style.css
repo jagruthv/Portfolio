@@ -187,15 +187,11 @@ nav {
     justify-content: center;
     text-align: center;
     position: relative;
-    padding-top: 8rem;
+    padding-top: 4rem;
 }
 
-.hero-badge {
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    margin-bottom: 1rem;
-    display: inline-block;
-    font-size: 0.9rem;
+.hero-content {
+    margin-top: 5rem; /* pushes content block down from true center */
 }
 
 .hero-content h1 {
