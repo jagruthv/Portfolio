@@ -4,16 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jagruth | Founder & Developer</title>
+    <title>Jagruth Vanteddu | Developer & Builder</title>
+    <meta name="description" content="Jagruth Vanteddu — B.Tech CSE at VIT-AP. Developer who ships real AI-powered products, automates workflows, and builds robust systems.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+
+    <!-- AURA-style background: ambient glows -->
+    <div id="bgGlowBlue" aria-hidden="true"></div>
+    <div id="bgGlowPurple" aria-hidden="true"></div>
+    <!-- Colourful mouse-trailing canvas (from AURA dashboard) -->
+    <canvas id="trailCanvas" aria-hidden="true"></canvas>
 
     <header>
         <div class="container">
@@ -21,9 +28,14 @@
                 <a href="#" class="logo">JAGRUTH</a>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Expertise</a></li>
                     <li><a href="#work">Work</a></li>
+                    <li><a href="#achievements">Wins</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <a href="resume.pdf" target="_blank" rel="noopener" class="nav-resume-btn">
+                    <i class="fa-solid fa-file-arrow-down"></i> Resume
+                </a>
             </nav>
         </div>
     </header>
@@ -32,105 +44,297 @@
         <!-- HERO SECTION -->
         <section id="hero" class="visible">
             <div class="container hero-content">
-                <span class="gradient-text"
-                    style="font-weight: 700; letter-spacing: 0.1em; margin-bottom: 1rem; display: block;">HELLO, I
-                    AM</span>
                 <h1>Student.<br>Developer.<br><span class="gradient-text">AI Enthusiast.</span></h1>
-                <p class="hero-subtitle">Exploring the world of code and AI. Creator of Realckon.</p>
-                <a href="#work" class="cta-button">View My Work</a>
+                <p class="hero-subtitle">Developer who ships real products — not just assignments.<br>B.Tech CSE @ VIT-AP (2023–27).</p>
+                
+                <div class="hero-actions">
+                    <a href="#work" class="cta-button">View My Work</a>
+                    <a href="resume.pdf" target="_blank" rel="noopener" class="cta-button-outline">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Resume
+                    </a>
+                </div>
+
+                <!-- Key stats -->
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <span class="stat-num">8.23</span>
+                        <span class="stat-label">CGPA</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <span class="stat-num">4</span>
+                        <span class="stat-label">Projects Shipped</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <span class="stat-num">1</span>
+                        <span class="stat-label">Live Domain</span>
+                    </div>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://github.com/jagruthv" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/jagruth-v2006" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:vanteddujagruth2406@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
             </div>
         </section>
 
-        <!-- ABOUT / SKILLS -->
+        <!-- ABOUT SECTION -->
         <section id="about">
             <div class="container">
-                <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Expertise</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <i class="fa-brands fa-java"></i>
-                        <h3>Java</h3>
-                        <p style="color: grey;">Core Logic & Backend</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fa-solid fa-code"></i>
-                        <h3>DSA</h3>
-                        <p style="color: grey;">Data Structs & Algos</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fa-solid fa-database"></i>
-                        <h3>SQL</h3>
-                        <p style="color: grey;">Database Management</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fa-solid fa-robot"></i>
-                        <h3>AI Prompting</h3>
-                        <p style="color: grey;">Advanced Contextual Design</p>
+                <span class="section-label">WHO I AM</span>
+                <h2 class="section-title">The Dev Behind the Work</h2>
+                
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            I'm Jagruth — a CSE student at VIT-AP (2023–27) based in Vijayawada. I believe the best way to master software engineering is by building and shipping real products from day one.
+                        </p>
+                        <p>
+                            I was an early adopter of Google Antigravity, using it to rapidly turn architectural ideas into production apps. My core foundation lies in Java and SQL, paired with practical experience across cloud infrastructure, LLM integrations, and workflow automation.
+                        </p>
+                        <div class="traits-container">
+                            <span class="trait-tag">Early Adopter</span>
+                            <span class="trait-tag">Rapid Prototyper</span>
+                            <span class="trait-tag">AI-Native Workflow</span>
+                            <span class="trait-tag">Ships Real Products</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FEATURED PROJECT ("Realckon") -->
+        <!-- EXPERTISE / SKILLS SECTION -->
+        <section id="skills">
+            <div class="container">
+                <span class="section-label">TECH STACK</span>
+                <h2 class="section-title">Expertise</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Languages</h3>
+                        <p>Java, SQL, Python, HTML/CSS</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-solid fa-robot"></i>
+                        <h3>AI &amp; Automation</h3>
+                        <p>Gemini APIs, n8n, Whisper, FFmpeg, Antigravity</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-solid fa-cloud"></i>
+                        <h3>Cloud &amp; Deploy</h3>
+                        <p>GCP Linux, Nginx, Firebase, Docker, Vercel</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-solid fa-database"></i>
+                        <h3>Databases &amp; Tools</h3>
+                        <p>MongoDB, Git, puTTY / WinSCP, VS Code</p>
+                    </div>
+                </div>
+
+                <!-- DSA Highlight Banner -->
+                <div class="dsa-highlight">
+                    <div class="dsa-icon">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </div>
+                    <div class="dsa-text">
+                        <h4>Data Structures &amp; Algorithms</h4>
+                        <p>Solid DSA foundation in Java — selected as Top Coder in campus-wide multi-campus competitive programming assessments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK / PROJECTS SECTION -->
         <section id="work" class="project-showcase">
             <div class="container project-container">
-                <span class="project-label">FEATURED PROJECT</span>
-                <h2 style="font-size: 3.5rem; margin-bottom: 1rem;">Realckon</h2>
-                <p style="max-width: 500px; color: var(--secondary-text);">An AI-powered Idea Validator. I built this to
-                    help users validate startup concepts using generative AI.</p>
+                <span class="project-label">PORTFOLIO</span>
+                <h2 style="font-size: 3rem; margin-bottom: 0.5rem;">Things I've Shipped</h2>
+                <p style="max-width: 600px; color: var(--secondary-text); margin-bottom: 2rem;">Real applications built with modern tools, AI APIs, and resilient architectures.</p>
 
-                <div class="project-card">
+                <!-- 01 · Realckon (Featured) -->
+                <div class="project-card featured-card">
                     <div class="project-image-placeholder">
-                        <!-- Would be a screenshot of Realckon -->
-                        <div style="text-align: center;">
-                            <i class="fa-solid fa-rocket"
-                                style="font-size: 4rem; margin-bottom: 1rem; color: #3b82f6;"></i>
-                            <p>Interactive AI Dashboard</p>
+                        <div style="text-align: center; padding: 2rem;">
+                            <i class="fa-solid fa-rocket" style="font-size: 3.5rem; margin-bottom: 1rem; color: #3b82f6;"></i>
+                            <h4 style="font-size: 1.25rem; color: #fff;">Realckon AI Engine</h4>
+                            <p style="color: var(--secondary-text); font-size: 0.9rem; margin-top: 0.5rem;">Interactive Idea Validation Dashboard</p>
                         </div>
                     </div>
                     <div class="project-info">
                         <div class="project-tags">
-                            <span class="tag">AI Integration</span>
-                            <span class="tag">React</span>
+                            <span class="tag">Gemini AI</span>
                             <span class="tag">Firebase</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Antigravity</span>
                         </div>
-                        <h3 class="project-title">From Concept to Validation</h3>
-                        <p style="color: var(--secondary-text); margin-bottom: 2rem;">
-                            Realckon uses Gemini AI to analyze business ideas, providing SWOT analysis, market fit
-                            scores, and actionable feedback.
+                        <h3 class="project-title">Realckon</h3>
+                        <p class="project-description">
+                            AI-powered startup idea validator. Submit a concept and get comprehensive SWOT analysis, market fit score, and actionable validation feedback driven by Gemini AI. Built in 4 weeks on Firebase with real users.
                         </p>
-                        <a href="https://gen-lang-client-0692443031.web.app" target="_blank" class="project-link">
-                            Launch Application <i class="fa-solid fa-arrow-right-long"></i>
+                        <a href="https://realckon.web.app" target="_blank" rel="noopener" class="project-link">
+                            Launch Application <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
+                    </div>
+                </div>
+
+                <!-- Grid of Secondary Projects -->
+                <div class="projects-subgrid">
+                    
+                    <!-- 02 · Civix -->
+                    <div class="subproject-card">
+                        <div class="subproject-img-wrap">
+                            <img src="civix.png" alt="Civix platform screenshot" class="subproject-img">
+                        </div>
+                        <div class="subproject-body">
+                            <div class="project-tags">
+                                <span class="tag">MongoDB</span>
+                                <span class="tag">Clerk</span>
+                                <span class="tag">Google Maps</span>
+                                <span class="tag">Gemini</span>
+                            </div>
+                            <h3>Civix</h3>
+                            <p>Civic reporting platform — log local infrastructure issues, Gemini categorizes them, Google Maps geotags locations. Clerk auth and AdSense monetization.</p>
+                            <a href="https://civix-plus.vercel.app" target="_blank" rel="noopener" class="project-link">
+                                View Live <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 03 · AURA -->
+                    <div class="subproject-card">
+                        <div class="subproject-icon-wrap">
+                            <i class="fa-solid fa-film"></i>
+                        </div>
+                        <div class="subproject-body">
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">FFmpeg</span>
+                                <span class="tag">TTS / Whisper</span>
+                                <span class="tag">SQLite</span>
+                            </div>
+                            <h3>AURA</h3>
+                            <p>Fully automated local video production pipeline — script in, finished video out. Frame-perfect TTS audio sync, FFmpeg compositor, SQLite DB tracker. Zero cloud cost.</p>
+                            <span class="badge-subtle"><i class="fa-solid fa-lock"></i> Local Tool · Automated</span>
+                        </div>
+                    </div>
+
+                    <!-- 04 · Mini Jarvis -->
+                    <div class="subproject-card">
+                        <div class="subproject-icon-wrap">
+                            <i class="fa-solid fa-microphone-lines"></i>
+                        </div>
+                        <div class="subproject-body">
+                            <div class="project-tags">
+                                <span class="tag">n8n</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Whisper</span>
+                                <span class="tag">Local AI</span>
+                            </div>
+                            <h3>Mini Jarvis</h3>
+                            <p>Voice-activated AI assistant. Orchestrated with n8n workflows, local Python mic capture, and on-device Whisper transcription. Fully private with no API costs.</p>
+                            <span class="badge-subtle"><i class="fa-solid fa-lock"></i> Local AI Assistant</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS / WINS SECTION -->
+        <section id="achievements">
+            <div class="container">
+                <span class="section-label">MILESTONES</span>
+                <h2 class="section-title">Achievements</h2>
+
+                <div class="achievements-grid">
+                    <div class="ach-card">
+                        <div class="ach-header">
+                            <i class="fa-solid fa-trophy"></i>
+                            <span class="ach-type">Competitive Programming</span>
+                        </div>
+                        <h3>Top Coder — VIT-AP</h3>
+                        <p>Selected as Top Coder from a campus-wide multi-campus assessment at VIT-AP, demonstrating strong Data Structures &amp; Algorithms problem-solving under strict timed conditions.</p>
+                    </div>
+
+                    <div class="ach-card">
+                        <div class="ach-header">
+                            <i class="fa-solid fa-certificate"></i>
+                            <span class="ach-type">Certification</span>
+                        </div>
+                        <h3>IBM Generative AI</h3>
+                        <p>Completed IBM's Generative AI certification covering foundation models, prompt engineering patterns, and responsible AI deployment.</p>
+                    </div>
+
+                    <div class="ach-card">
+                        <div class="ach-header">
+                            <i class="fa-solid fa-globe"></i>
+                            <span class="ach-type">Live Deployment</span>
+                        </div>
+                        <h3>Custom Domain — jagruth.tech</h3>
+                        <p>Purchased and configured personal domain running on Vercel with custom DNS routing and SSL provisioning.</p>
+                    </div>
+
+                    <div class="ach-card">
+                        <div class="ach-header">
+                            <i class="fa-brands fa-google"></i>
+                            <span class="ach-type">Cloud Infrastructure</span>
+                        </div>
+                        <h3>GCP Linux Deployment</h3>
+                        <p>Configured and deployed full-stack web applications on Google Cloud Platform Linux Compute Engine using Nginx reverse proxy, puTTY, and WinSCP.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT -->
+        <!-- CONTACT SECTION -->
         <section id="contact">
             <div class="container">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Get in Touch</h2>
-                <p style="color: var(--secondary-text); max-width: 400px;">Ready to collaborate on the next big AI
-                    project?</p>
+                <span class="section-label">GET IN TOUCH</span>
+                <h2 class="section-title">Let's Build Something Real</h2>
+                <p style="color: var(--secondary-text); max-width: 500px; margin-bottom: 3rem;">
+                    Available for software engineering internships, collaborative builds, and technical discussions.
+                </p>
 
                 <div class="contact-grid">
-                    <div class="contact-item">
+                    <div class="contact-card">
+                        <i class="fa-solid fa-envelope"></i>
                         <h3>Email</h3>
-                        <p><a href="mailto:vanteddujagruth2406@gmail.com"
-                                style="color: inherit; text-decoration: none;">vanteddujagruth2406@gmail.com</a></p>
+                        <p><a href="mailto:vanteddujagruth2406@gmail.com">vanteddujagruth2406@gmail.com</a></p>
+                        <button class="copy-btn" id="copyEmailBtn" onclick="copyEmail()">
+                            <i class="fa-regular fa-copy"></i> Copy Email
+                        </button>
                     </div>
-                    <div class="contact-item">
+
+                    <div class="contact-card">
+                        <i class="fa-solid fa-phone"></i>
                         <h3>Phone</h3>
-                        <p>+91 9296050995</p>
+                        <p><a href="tel:+919296050995">+91 9296050995</a></p>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fa-brands fa-github"></i>
+                        <h3>GitHub</h3>
+                        <p><a href="https://github.com/jagruthv" target="_blank" rel="noopener">github.com/jagruthv</a></p>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <h3>LinkedIn</h3>
+                        <p><a href="https://linkedin.com/in/jagruth-v2006" target="_blank" rel="noopener">jagruth-v2006</a></p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer
-        style="padding: 2rem 0; text-align: center; color: var(--secondary-text); border-top: 1px solid rgba(255,255,255,0.05); margin-top: 4rem;">
-        <p>&copy; 2025 Jagruth. All rights reserved.</p>
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Jagruth Vanteddu. All rights reserved.</p>
+            <p><a href="https://jagruth.tech" class="footer-link">jagruth.tech</a></p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
