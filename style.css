@@ -191,7 +191,7 @@ nav {
 }
 
 .hero-content {
-    margin-top: 5rem; /* pushes content block down from true center */
+    margin-top: 2rem; /* small nudge down — keeps all content in viewport */
 }
 
 .hero-content h1 {
